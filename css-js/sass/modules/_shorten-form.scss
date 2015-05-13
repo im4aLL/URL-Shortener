@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.shorten-form {
+
+}
+
+.shorten-form--cta {
+    margin-top: rem-calc(10);
+    width: 100%;
+}
+
+.shorten-form--response {
+    text-align: center;
+    padding: rem-calc(50) 0;
+}
+
+.shorten-form--response--header {
+    font-size: rem-calc(14);
+}
+
+.shorten-form--response--url {
+    font-size: rem-calc(22);
+    border: none;
+    background: transparent;
+    margin-top: rem-calc(10);
+    text-align: center;
+    outline: none;
+}
+
+@media #{$medium-up} {
+
+    .shorten-form--cta {
+        margin-top: 0;
+        width: auto;
+    }
+
+    .shorten-form--response {
+        text-align: left;
+    }
+
+    .shorten-form--response--url {
+        text-align: left;
+    }
+
+}

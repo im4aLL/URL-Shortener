@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+$button-color: $color-primary !default;
+$button-hover-color: #b31803 !default;
+
+.button {
+    padding: 0 rem-calc(20);
+    border: none;
+    background: $button-color;
+    color: $base-white;
+    font-size: rem-calc(16);
+    font-weight: bold;
+    height: rem-calc(50);
+    line-height: rem-calc(50);
+    border-radius: rem-calc(4);
+    transition: background $transation-duration $transition-method;
+    outline: none;
+
+    &:hover {
+        background-color: $button-hover-color;
+        cursor: pointer;
+    }
+}

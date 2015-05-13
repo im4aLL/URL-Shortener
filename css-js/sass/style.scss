@@ -1,13 +1,28 @@
-$color: #000;
-$red: #ff0000;
+@charset "UTF-8";
 
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    p {
-        color: $color;
-    }
 
-    .error {
-        color: $red;
-    }
-}
+@import "../vendors/foundation/scss/foundation/functions";
+@import "settings"; // custom settings
+@import "../vendors/foundation/scss/foundation/components/grid";
+
+
+@import "mixin";
+
+/* global base styles e.g body, a */
+@import "base";
+
+/* layout styles e.g. header, article, footer */
+@import "layout";
+
+/* helper classes like is-hidden, is-active */
+@import "state";
+
+/* modules */
+@import "modules/header";
+@import "modules/form";
+@import "modules/button";
+@import "modules/shorten-form";
+@import "modules/footer";
+
+/* theme e.g. theme-dark */
+@import "theme";

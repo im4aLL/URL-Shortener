@@ -1,0 +1,9 @@
+{
+  "name": "URL-Shortener",
+  "version": "0.0.1",
+  "homepage": "https://github.com/im4aLL/URL-Shortener",
+  "dependencies": {
+    "jquery": "1.11.3",
+    "foundation": "~5.5.2"
+  }
+}

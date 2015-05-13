@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+$color-placeholder: #b0b0b0 !default;
+
+::-webkit-input-placeholder {
+   color: $color-placeholder;
+}
+
+:-moz-placeholder {
+   color: $color-placeholder;
+}
+
+::-moz-placeholder {
+   color: $color-placeholder;
+}
+
+:-ms-input-placeholder {
+   color: $color-placeholder;
+}
+
+.form {
+    input {
+        width: 100%;
+        font-family: $base-font-family;
+        border: rem-calc(1) solid #ddd;
+        padding: 0 rem-calc(15);
+        border-radius: rem-calc(4);
+        height: rem-calc(50);
+        line-height: rem-calc(50);
+        transition: border $transation-duration $transition-method;
+
+        &:focus {
+            border-color: #a4a4a4;
+            outline: none;
+        }
+
+        &.is-error {
+            border-color: $color-primary;
+        }
+    }
+}
+
+.form--error-text {
+    color: $color-primary;
+    display: inline-block;
+    padding: rem-calc(10) rem-calc(15);
+    font-size: rem-calc(12);
+}

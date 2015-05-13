@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.footer {
+    padding: rem-calc(20) 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.footer--claim {
+    color: #a0a0a0;
+}
+
+
+@media #{$medium-up} {
+    .footer {
+        padding: rem-calc(40) 0;
+    }
+}

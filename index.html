@@ -2,13 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>URL shortener for Mindvalley</title>
 
     <link rel="stylesheet" href="css-js/style.min.css">
 </head>
 <body>
 
+    <header class="header">
+        <div class="row">
+            <div class="columns col-small-12">
+                <h1 class="header--logo"><a href="./" class="header--logo--text">URL shorten</a></h1>
+                <p class="header--slogan">Short long URL to small!</p>
+            </div>
+        </div>
+    </header>
 
+    <section class="shorten-form">
+        <form class="row form" action="./" method="post">
+            <div class="columns small-12 medium-9">
+                <input type="url" name="longurl" placeholder="http://your-long-url.com/xxxxx">
+                <span class="form--error-text is-hidden">Paste valid URL</span>
+            </div>
+            <div class="columns small-12 medium-3">
+                <button type="submit" class="button shorten-form--cta">Short URL</button>
+            </div>
+        </form>
+
+        <div class="shorten-form--response row is-hidden">
+            <div class="columns small-12">
+                <p class="shorten-form--response--header">Here is your shorten URL - </p>
+                <input type="text" class="shorten-form--response--url" value="http://bit.ly/2341">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="row">
+            <p class="footer--claim columns small-12"><small>&copy; Url Shorten demo</small></p>
+        </div>
+    </footer>
 
     <script src="css-js/vendors/jquery/dist/jquery.min.js"></script>
     <script src="css-js/main.min.js"></script>
