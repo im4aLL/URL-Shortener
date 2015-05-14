@@ -1824,7 +1824,7 @@ small {
 }
 
 /* line 23, ../sass/modules/_form.scss */
-.form input {
+.form input, .form select {
   width: 100%;
   font-family: "Roboto", sans-serif;
   border: 0.0625rem solid #ddd;
@@ -1835,12 +1835,12 @@ small {
   transition: border 400ms ease-in-out;
 }
 /* line 33, ../sass/modules/_form.scss */
-.form input:focus {
+.form input:focus, .form select:focus {
   border-color: #a4a4a4;
   outline: none;
 }
 /* line 38, ../sass/modules/_form.scss */
-.form input.is-error {
+.form input.is-error, .form select.is-error {
   border-color: #d81e04;
 }
 
@@ -1897,21 +1897,40 @@ small {
   margin-top: 0.625rem;
   text-align: center;
   outline: none;
+  width: 100%;
+}
+
+/* line 31, ../sass/modules/_shorten-form.scss */
+.form--input-wrapper {
+  position: relative;
+}
+
+/* line 35, ../sass/modules/_shorten-form.scss */
+.shorten-form--longurl {
+  padding-right: 6.875rem;
+}
+
+/* line 39, ../sass/modules/_shorten-form.scss */
+.shorten-form .shorten-form--method {
+  position: absolute;
+  right: 0.625rem;
+  top: 0;
+  width: 6.25rem;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 32, ../sass/modules/_shorten-form.scss */
+  /* line 48, ../sass/modules/_shorten-form.scss */
   .shorten-form--cta {
     margin-top: 0;
     width: auto;
   }
 
-  /* line 37, ../sass/modules/_shorten-form.scss */
+  /* line 53, ../sass/modules/_shorten-form.scss */
   .shorten-form--response {
     text-align: left;
   }
 
-  /* line 41, ../sass/modules/_shorten-form.scss */
+  /* line 57, ../sass/modules/_shorten-form.scss */
   .shorten-form--response--url {
     text-align: left;
   }

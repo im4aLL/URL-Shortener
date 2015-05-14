@@ -25,6 +25,22 @@
     margin-top: rem-calc(10);
     text-align: center;
     outline: none;
+    width: 100%;
+}
+
+.form--input-wrapper {
+    position: relative;
+}
+
+.shorten-form--longurl {
+    padding-right: rem-calc(110);
+}
+
+.shorten-form .shorten-form--method {
+    position: absolute;
+    right: rem-calc(10);
+    top: 0;
+    width: rem-calc(100);
 }
 
 @media #{$medium-up} {

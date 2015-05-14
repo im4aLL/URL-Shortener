@@ -20,7 +20,7 @@ $color-placeholder: #b0b0b0 !default;
 }
 
 .form {
-    input {
+    input, select {
         width: 100%;
         font-family: $base-font-family;
         border: rem-calc(1) solid #ddd;

@@ -10,6 +10,7 @@ class Shorten {
     public $url;
     public $post_data;
     public $request_method;     // GET | POST
+    public $request_url;
 
     public function __construct() {
         $this->request_method = 'GET';
@@ -22,11 +23,12 @@ class Shorten {
     public function get(){
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->url);
+        curl_setopt($ch, CURLOPT_URL, $this->request_url);
 
         if( $this->request_method == 'POST' ) {
             curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $this->post_data);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type:application/json'));
         }
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -52,7 +54,27 @@ class Bitly extends Shorten {
     }
 
     public function build_request_path(){
-        $this->url = $this->api_url.'?login='.$this->login.'&apiKey='.$this->api_key.'&longUrl='.$this->url;
+        $this->request_url = $this->api_url.'?login='.$this->login.'&apiKey='.$this->api_key.'&longUrl='.$this->url;
+    }
+
+    public function get_short_url(){
+        $this->build_request_path();
+        return $this->get();
+    }
+}
+
+class GoogleShorten extends Shorten {
+    private $api_key = GOOGLE_API_KEY;
+    private $api_url = GOOGLE_API_URL;
+
+    public function __construct() {
+        parent::__construct();
+        $this->request_method = 'POST';
+    }
+
+    public function build_request_path(){
+        $this->post_data = json_encode(array('longUrl' => $this->url));
+        $this->request_url = $this->api_url.'?key='.$this->api_key;
     }
 
     public function get_short_url(){
