@@ -27,7 +27,6 @@ $color-placeholder: #b0b0b0 !default;
         padding: 0 rem-calc(15);
         border-radius: rem-calc(4);
         height: rem-calc(50);
-        line-height: rem-calc(50);
         transition: border $transation-duration $transition-method;
 
         &:focus {

@@ -1831,20 +1831,19 @@ small {
   padding: 0 0.9375rem;
   border-radius: 0.25rem;
   height: 3.125rem;
-  line-height: 3.125rem;
   transition: border 400ms ease-in-out;
 }
-/* line 33, ../sass/modules/_form.scss */
+/* line 32, ../sass/modules/_form.scss */
 .form input:focus, .form select:focus {
   border-color: #a4a4a4;
   outline: none;
 }
-/* line 38, ../sass/modules/_form.scss */
+/* line 37, ../sass/modules/_form.scss */
 .form input.is-error, .form select.is-error {
   border-color: #d81e04;
 }
 
-/* line 44, ../sass/modules/_form.scss */
+/* line 43, ../sass/modules/_form.scss */
 .form--error-text {
   color: #d81e04;
   display: inline-block;
